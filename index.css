@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    background: url('/assets/window.jpg');
+    display: flex;
+}
+header{
+    display: flex;
+}
+
+.boss img{
+    position: relative;
+    width: 150px;
+    height: auto;
+    margin: 110px 25px 0px 15px;
+    border: 1px solid #aeba0d;
+    border-radius: 15px;
+    box-shadow: 10px 8px rgba(0, 0, 0, 0.7);
+    
+
+    
+}
+
+.boss{
+    
+}
+
+.level_1{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 300px 10px 10px 10px;
+}
+.level_2{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.level_3{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.level_4{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.level_5{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.levUp span{
+    color: gold;
+
+}
+
+.background_card img{
+    position: relative;
+    width: 100px;
+    height: auto;
+    top: 211px;
+    left: 172px;
+}
+
+.displa_none{
+    display: none;
+}
+
