@@ -25,9 +25,12 @@ header{
     
 }
 
-.boss{
-    
+.active img{
+    box-shadow: 10px 8px rgba(225, 7, 207, 0.7);
 }
+
+
+
 
 .level_1{
     border: 1px solid black;
@@ -92,7 +95,121 @@ header{
     left: 172px;
 }
 
-.displa_none{
+.display_none{
     display: none;
 }
 
+.button_start button{
+    position: relative;
+    width: 150px;
+    height: 50px;
+    color: red;
+    background-color: #eeff00;
+    left: 10px;
+    top: 180px;
+}
+.conteiner{
+    position: relative;
+    left: 161px;
+    top: -162px;
+}
+
+.conteiner_for_stage{
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner_for_card{ 
+    display: flex;
+}
+.first-green-point{
+    margin: 10px;
+    background-color: green;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.first-blue-point{
+    margin: 10px;
+    background-color: blue;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.first-red-point{
+    margin: 10px;
+    background-color: red;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.second-green-point{
+    margin: 10px;
+    background-color: green;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.second-blue-point{
+    margin: 10px;
+    background-color: blue;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.second-red-point{
+    margin: 10px;
+    background-color: red;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.third-green-point{
+    margin: 10px;
+    background-color: green;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.third-blue-point{
+    margin: 10px;
+    background-color: blue;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.third-red-point{
+    margin: 10px;
+    background-color: red;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+
+
+
+
+
+.new_col{
+    position: relative;
+    left: 171px;
+    
+    
+    
+}
+
+
+.active_level{
+    background-color: #eeff00;
+    opacity: 1;   
+}
