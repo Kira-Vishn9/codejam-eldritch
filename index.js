@@ -10,6 +10,8 @@ const boss2 = document.querySelector('.drevni_2');
 const boss3 = document.querySelector('.drevni_3');
 const boss4 = document.querySelector('.drevni_4');
 //все уровни
+
+
 //контейнер всех уровни
 const conteinerLevels = document.querySelector('.levels');
 //массив уровней
@@ -21,6 +23,8 @@ const level3 = document.querySelector('.level_3');
 const level4 = document.querySelector('.level_4');
 const level5 = document.querySelector('.level_5');
 //перевернутая колода
+
+
 const backgroundCard = document.querySelector('.background_card');
 //контейнер со счетчиком карт
 const conteinerTreker = document.querySelector('.conteiner');
