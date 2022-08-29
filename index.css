@@ -5,7 +5,8 @@
   }
 
 body{
-    background: url('/assets/window.jpg');
+    
+    background-image: url('/assets/window.jpg');
     display: flex;
 }
 header{
@@ -13,7 +14,7 @@ header{
 }
 
 .boss img{
-    position: relative;
+    
     width: 150px;
     height: auto;
     margin: 110px 25px 0px 15px;
@@ -24,7 +25,9 @@ header{
 
     
 }
-
+.finished{
+    text-decoration: line-through;
+}
 .active img{
     box-shadow: 10px 8px rgba(225, 7, 207, 0.7);
 }
@@ -87,12 +90,30 @@ header{
 
 }
 
+.dek{
+
+}
+
+.conteiner_footer{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+
+
+.conteiner{
+    margin-bottom: 50px;
+}
+
+.conteiner_button_start{
+    margin-bottom: 50px;
+}
+
 .background_card img{
-    position: relative;
+    
     width: 100px;
     height: auto;
-    top: 211px;
-    left: 172px;
+   
 }
 
 .display_none{
@@ -100,18 +121,15 @@ header{
 }
 
 .button_start button{
-    position: relative;
+    
     width: 150px;
     height: 50px;
     color: red;
     background-color: #eeff00;
-    left: 10px;
-    top: 180px;
+   
 }
-.conteiner{
-    position: relative;
-    left: 161px;
-    top: -162px;
+.main{
+    margin-left: 150px;
 }
 
 .conteiner_for_stage{
@@ -198,18 +216,21 @@ header{
 
 
 
-
-
-.new_col{
-    position: relative;
-    left: 171px;
-    
-    
-    
+.open-card{
+margin-top: 405px;
+width: 150px;
+height: 180px;
 }
+
+
 
 
 .active_level{
     background-color: #eeff00;
     opacity: 1;   
+}
+
+.new_dek{
+    margin-left: 100px;
+    margin-top: 250px;
 }

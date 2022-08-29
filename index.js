@@ -1,7 +1,7 @@
 import ancientsData from '../data/ancients.js';
-import cardsDataGr from '../data//mythicCards/green/index.js';
-import cardsDataBr from '../data/mythicCards/brown/index.js';
-import cardsDataBl from '../data/mythicCards/blue/index.js';
+import cardsDataGr from './data/mythicCards/green/index.js';
+import cardsDataBr from './data/mythicCards/brown/index.js';
+import cardsDataBl from './data/mythicCards/blue/index.js';
 
 // виды боссов
 const bossAll = document.querySelectorAll('.boss');
@@ -13,7 +13,7 @@ const boss4 = document.querySelector('.drevni_4');
 //контейнер всех уровни
 const conteinerLevels = document.querySelector('.levels');
 //массив уровней
-const allLevels = document.querySelectorAll('.levUp');
+const buttons = document.querySelectorAll('.difficulty');
 //уровни по отдельности
 const level1 = document.querySelector('.level_1');
 const level2 = document.querySelector('.level_2');
@@ -60,78 +60,272 @@ let deck = [];
 let gameDeck = [];
 
 // функция рандомного числа
-let randNum = 0;
+// let randNum = 0;
 
-function getRandomNum(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    const result =Math.floor(Math.random() * (max - min + 1)) + min;
-    return randNum = result;
-  };getRandomNum(0, 12);
-  console.log(randNum);
+// function getRandomNum(min, max) {
+//     min = Math.ceil(min);
+//     max = Math.floor(max);
+//     const result =Math.floor(Math.random() * (max - min + 1)) + min;
+//     return randNum = result;
+//   };getRandomNum(0, 12);
+//   console.log(randNum);
 
 // ПОГНАЛИ НАХУЙ!!! ВСЕ ПОЛУЧИТЬСЯ!!!
-
+bossAll.forEach((elem) => {
+    elem.addEventListener('click', () => {
+        level1.innerHTML = 'level 1';
+        level2.innerHTML = 'level 2';
+        level3.innerHTML = 'level 3';
+        level4.innerHTML = 'level 4';
+        level5.innerHTML = 'level 5';
+    })
+})
 //функии вешашаем евенты на босоов
 // boss Azathoth
+
+
+
 boss1.addEventListener('click', () => {
     conteinerLevels.classList.remove('display_none');
-    bossAll.forEach(element => {
-        element.classList.remove('active');
-    });
-    boss1.classList.add('active');
     ChooseBoss = ancientsData[0];
+    bossAll.forEach((elem) =>{
+        elem.classList.remove('active')
+    });
+    bossAll[0].classList.add('active');
+  
 })
 
 //boss Cthulthu
 boss2.addEventListener('click', () => {
     conteinerLevels.classList.remove('display_none');
-    bossAll.forEach(element => {
-        element.classList.remove('active');
+    bossAll.forEach((elem) =>{
+        elem.classList.remove('active')
     });
-    boss2.classList.add('active');
+    bossAll[1].classList.add('active');
     ChooseBoss = ancientsData[1];
 })
 
 //boss IogSothoth
 boss3.addEventListener('click', () => {
     conteinerLevels.classList.remove('display_none');
-    bossAll.forEach(element => {
-        element.classList.remove('active');
+    bossAll.forEach((elem) =>{
+        elem.classList.remove('active')
     });
-    boss3.classList.add('active');
+    bossAll[2].classList.add('active');
     ChooseBoss = ancientsData[2];
 })
 
 //ShubNiggurath
 boss4.addEventListener('click', () => {
     conteinerLevels.classList.remove('display_none');
-    bossAll.forEach(element => {
-        element.classList.remove('active');
+    bossAll.forEach((elem) =>{
+        elem.classList.remove('active')
     });
-    boss4.classList.add('active');
+    bossAll[3].classList.add('active');
     ChooseBoss = ancientsData[3];
 })
 
+// нажатие на деку
+backgroundCard.addEventListener('click', () => {
+
+    let firstcard;
+    if (!gameDeck[0].every(val => val.length === 0)) {
+        while (!firstcard) {
+            firstcard = deleteCard(gameDeck[0]);
+        }
+        newDec.style.background = `url(${firstcard.cardFace})`;
+        newDec.style.backgroundSize = "contain";
+        newDec.style.backgroundRepeat = "no-repeat";
+        rewrite(gameDeck);
+
+        if (gameDeck[0].flat(Infinity).length === 0) {
+            titleFirst.classList.add('finished');
+        }
+
+    } else if (!gameDeck[1].every(val => val.length === 0)) {
+
+        while (!firstcard) {
+            firstcard = deleteCard(gameDeck[1]);
+        }
+        newDec.style.background = `url(${firstcard.cardFace})`;
+        newDec.style.backgroundSize = "contain";
+        newDec.style.backgroundRepeat = "no-repeat";
+        rewrite(gameDeck);
+
+        if (gameDeck[1].flat(Infinity).length === 0) {
+            titleSecond.classList.add('finished');
+        }
+
+    } else if (!gameDeck[2].every(val => val.length === 0)) {
+        while (!firstcard) {
+            firstcard = deleteCard(gameDeck[2]);
+        }
+        newDec.style.background = `url(${firstcard.cardFace})`;
+        newDec.style.backgroundSize = "contain";
+        newDec.style.backgroundRepeat = "no-repeat";
+        rewrite(gameDeck);
+
+        if (gameDeck[2].flat(Infinity).length === 0) {
+            titleThird.classList.add('finished');
+        }
+    }
+    if (gameDeck.flat(Infinity).length === 0) {
+       
+    }
+})
+
+
+
+//выкидываем карту
+const deleteCard = (deckArray) => {
+    if (deckArray) {
+        let randNumb = Math.floor(Math.random() * 3);
+        return deckArray[randNumb].pop();
+    }}
+
 // вешаем евент на массив уровней 
 
-allLevels.forEach((element, index) =>{
-    element.addEventListener('click', () => {
+buttons.forEach((element, ) =>{
+    element.addEventListener('click', (event) => {
         backgroundCard.classList.remove('display_none');
         buttonStart.classList.remove('display_none');
         conteinerTreker.classList.remove('display_none');
-        allLevels.forEach((element) =>{
-            element.classList.remove('active_level');
+        
+        buttons.forEach((elem, ) =>{
+            elem.classList.remove('active_level');  
         });
-        allLevels[index].classList.add('active_level');
+        if (event.target.classList.contains('level_1')){
+            deck = shuffle(buildDeckfromDifficulty(cardsDataGr, cardsDataBl, cardsDataBr, 'veryeasy'));
+            buttons[0].classList.add('active_level');
+        } else if (event.target.classList.contains('level_2')) {
+            deck = shuffle(buildDeckfromDifficulty(cardsDataGr, cardsDataBl, cardsDataBr, 'easy'))
+            buttons[1].classList.add('active_level');
+        } else if (event.target.classList.contains('level_3')) {
+            deck = shuffle(buildDeckfromDifficulty(cardsDataGr, cardsDataBl, cardsDataBr, 'normal'))
+            buttons[2].classList.add('active_level');
+        } else if (event.target.classList.contains('level_4')) {
+            deck = shuffle(buildDeckfromDifficulty(cardsDataGr, cardsDataBl, cardsDataBr, 'hard'))
+            buttons[3].classList.add('active_level');
+        } else if (event.target.classList.contains('level_5')) {
+            deck =shuffle(buildDeckfromDifficulty(cardsDataGr, cardsDataBl, cardsDataBr, 'veryhard'));
+            buttons[4].classList.add('active_level');
+        }
     })
 })
 
-// вешам евент на перевернутую колоду
-
-backgroundCard.addEventListener('click', () =>{
+buttonStart.addEventListener('click', () =>{
+    gameDeck = shuffleDeck(ChooseBoss);
+    rewrite(gameDeck);
     
-})
+});
+
+
+
+// сортируем по уровню
+const buildDeckfromDifficulty = (cardsDataGr, cardsDataBl, cardsDataBr, difficulty) => {
+    let fullDeck = [...cardsDataGr, ...cardsDataBl, ...cardsDataBr];
+    let easyCards = [];
+    let normalCards = [];
+    let hardCards = [];
+    fullDeck.forEach(elem => {
+        if (elem.difficulty === 'easy') {
+            easyCards.push(elem);
+        } else if (elem.difficulty === 'normal') {
+            normalCards.push(elem);
+        } else {
+            hardCards.push(elem);
+        }
+    })
+    switch (difficulty) {
+        case 'veryeasy': {
+            return [...shuffle(easyCards), ...shuffle(normalCards)];
+        }
+        case 'easy': {
+            return [...shuffle(easyCards), ...shuffle(normalCards)];
+        }
+        case 'normal': {
+            return [...shuffle(easyCards), ...shuffle(normalCards), ...shuffle(hardCards)];
+        }
+        case 'hard': {
+            return [...shuffle(normalCards), ...shuffle(hardCards)];
+        }
+        case 'veryhard': {
+            return [...shuffle(hardCards), ...shuffle(normalCards)];
+        }
+    }
+
+}
+
+
+//сортируем по цвету
+const stagesCreate = (stage, deck) => {
+
+    let greenCards = [];
+    let brownCards = [];
+    let blueCards = [];
+
+    for (const key in stage) {
+        for (let i = 0; i < stage[key]; i++) {
+            if (key === 'greenCards') {
+                const index = deck.findIndex(value => value.color === 'green');
+                greenCards.push(...deck.splice(index, 1));
+            } else if (key === 'brownCards') {
+                const index = deck.findIndex(value => value.color === 'brown');
+                brownCards.push(...deck.splice(index, 1));
+            } else if (key === 'blueCards') {
+                const index = deck.findIndex(value => value.color === 'blue');
+                blueCards.push(...deck.splice(index, 1));
+            }
+        }
+    }
+    return [shuffle(greenCards), shuffle(brownCards), shuffle(blueCards)]
+
+}
+
+
+const shuffleDeck = (boss) => {
+
+    const first = stagesCreate(boss.firstStage, deck);
+    const second = stagesCreate(boss.secondStage, deck);
+    const third = stagesCreate(boss.thirdStage, deck);
+
+    return [first, second, third];
+
+
+}
+
+//трекер
+const rewrite = (array) => {
+
+    firstGreenPoint.textContent = array[0][0].length;
+    firstbBluePoint.textContent = array[0][1].length;
+    firstRedPoint.textContent = array[0][2].length;
+
+    secondGreenPoint.textContent = array[1][0].length;
+    secondBluePoint.textContent = array[1][1].length;
+    secondRedPoint.textContent = array[1][2].length;
+
+    thirdtGreenPoint.textContent = array[2][0].length;
+    thirdbBluePoint.textContent = array[2][1].length;
+    thirdRedPoint.textContent = array[2][2].length;
+}
+
+// замес колоды
+
+function shuffle(array) {
+    let currentIndex = array.length, randomIndex;
+
+    while (currentIndex != 0) {
+
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+
+        [array[currentIndex], array[randomIndex]] = [
+            array[randomIndex], array[currentIndex]];
+    }
+
+    return array;
+}
 
 
 
