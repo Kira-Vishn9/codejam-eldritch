@@ -5,7 +5,7 @@
   }
 
 body{
-    background-image: url('/assets/window.jpg');
+    background-image: url('assets/window.jpg');
     display: flex;
 }
 header{
