@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body{
+    
+    background-image: url('/assets/window.jpg');
+    display: flex;
+}
+header{
+    display: flex;
+}
+
+.boss img{
+    
+    width: 150px;
+    height: auto;
+    margin: 110px 25px 0px 15px;
+    border: 1px solid #aeba0d;
+    border-radius: 15px;
+    box-shadow: 10px 8px rgba(0, 0, 0, 0.7);
+    
+
+    
+}
+.finished{
+    text-decoration: line-through;
+}
+.active img{
+    box-shadow: 10px 8px rgba(225, 7, 207, 0.7);
+}
+
+
+
+
+.level_1{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 300px 10px 10px 10px;
+}
+.level_2{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.level_3{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.level_4{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.level_5{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 100px;
+    height: 20px;
+    opacity: 0.8;
+    background: #461111;
+    margin: 10px 10px 10px 10px;
+}
+.levUp span{
+    color: gold;
+
+}
+
+.dek{
+
+}
+
+.conteiner_footer{
+    margin-top: 100px;
+    margin-left: 150px;
+}
+
+
+
+.conteiner{
+    margin-bottom: 50px;
+}
+
+.conteiner_button_start{
+    margin-bottom: 50px;
+}
+
+.background_card img{
+    
+    width: 100px;
+    height: auto;
+   
+}
+
+.display_none{
+    display: none;
+}
+
+.button_start button{
+    
+    width: 150px;
+    height: 50px;
+    color: red;
+    background-color: #eeff00;
+   
+}
+.main{
+    margin-left: 150px;
+}
+
+.conteiner_for_stage{
+    display: flex;
+    justify-content: center;
+}
+
+.conteiner_for_card{ 
+    display: flex;
+}
+.first-green-point{
+    margin: 10px;
+    background-color: green;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.first-blue-point{
+    margin: 10px;
+    background-color: blue;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.first-red-point{
+    margin: 10px;
+    background-color: red;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.second-green-point{
+    margin: 10px;
+    background-color: green;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.second-blue-point{
+    margin: 10px;
+    background-color: blue;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.second-red-point{
+    margin: 10px;
+    background-color: red;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.third-green-point{
+    margin: 10px;
+    background-color: green;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.third-blue-point{
+    margin: 10px;
+    background-color: blue;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+.third-red-point{
+    margin: 10px;
+    background-color: red;
+    border: 0px solid;
+    border-radius: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+
+
+
+.open-card{
+margin-top: 405px;
+width: 150px;
+height: 180px;
+}
+
+
+
+
+.active_level{
+    background-color: #eeff00;
+    opacity: 1;   
+}
+
+.new_dek{
+    margin-left: 100px;
+    margin-top: 250px;
+}
