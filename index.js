@@ -14,8 +14,10 @@ const boss4 = document.querySelector('.drevni_4');
 
 //контейнер всех уровни
 const conteinerLevels = document.querySelector('.levels');
+
 //массив уровней
 const buttons = document.querySelectorAll('.difficulty');
+
 //уровни по отдельности
 const level1 = document.querySelector('.level_1');
 const level2 = document.querySelector('.level_2');
@@ -23,8 +25,6 @@ const level3 = document.querySelector('.level_3');
 const level4 = document.querySelector('.level_4');
 const level5 = document.querySelector('.level_5');
 //перевернутая колода
-
-
 const backgroundCard = document.querySelector('.background_card');
 //контейнер со счетчиком карт
 const conteinerTreker = document.querySelector('.conteiner');
