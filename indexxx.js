@@ -1,4 +1,4 @@
-import ancientsData from '../data/ancients.js';
+import ancientsData from './data/ancients.js';
 import cardsDataGr from './data/mythicCards/green/index.js';
 import cardsDataBr from './data/mythicCards/brown/index.js';
 import cardsDataBl from './data/mythicCards/blue/index.js';
