@@ -5,8 +5,7 @@
   }
 
 body{
-    
-    background-image: url('/assets/window.jpg');
+    background-image: url('assets/window.jpg');
     display: flex;
 }
 header{
@@ -14,16 +13,12 @@ header{
 }
 
 .boss img{
-    
     width: 150px;
     height: auto;
     margin: 110px 25px 0px 15px;
     border: 1px solid #aeba0d;
     border-radius: 15px;
-    box-shadow: 10px 8px rgba(0, 0, 0, 0.7);
-    
-
-    
+    box-shadow: 10px 8px rgba(0, 0, 0, 0.7);  
 }
 .finished{
     text-decoration: line-through;
@@ -31,10 +26,6 @@ header{
 .active img{
     box-shadow: 10px 8px rgba(225, 7, 207, 0.7);
 }
-
-
-
-
 .level_1{
     border: 1px solid black;
     border-radius: 5px;
@@ -87,19 +78,12 @@ header{
 }
 .levUp span{
     color: gold;
-
-}
-
-.dek{
-
 }
 
 .conteiner_footer{
     margin-top: 100px;
     margin-left: 150px;
 }
-
-
 
 .conteiner{
     margin-bottom: 50px;
@@ -110,10 +94,8 @@ header{
 }
 
 .background_card img{
-    
     width: 100px;
     height: auto;
-   
 }
 
 .display_none{
@@ -121,7 +103,6 @@ header{
 }
 
 .button_start button{
-    
     width: 150px;
     height: 50px;
     color: red;
